@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Từ tiếng Anh
+        <input type="text" id="input">
+    </div>
+    <div>
+        <button type="submit" onclick="Search()">Search</button>
+    </div>
+    <div>
+        <label id="result">Nghĩa tiếng Việt:</label>
+    </div>
+</body>
+<script>
+    var tiengViet =[
+        'một', 'hai', 'ba', 'bốn', 'năm'
+    ];
+    var tiengAnh = [
+        'one', 'two', 'three', 'four', 'five'
+    ];
+
+    function Search(){
+        var input = document.getElementById('input').value;
+        var timTA;
+        for(var i = 0; i<tiengAnh.length;i++){
+           if(input == tiengAnh[i]){
+                timTA = i;
+                return document.getElementById('result').innerHTML = 'Nghĩa tiếng Viêt: '+ tiengViet[timTA];    
+           }
+           
+        document.getElementById('result').innerHTML = 'Nghĩa tiếng Việt: Không tìm thấy'; 
+        
+        }return;
+        
+        //tiengViet[timTA];//0-một
+        
+    }
+</script>
+</html>
