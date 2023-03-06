@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            display: flex;
+            padding-bottom: 10px;
+        }
+        .grid-item{
+            position: relative;
+            text-align: center;
+        }
+        input{
+            width: 50%;
+            height: 50%;
+        }
+        button{
+            margin-top: 16px;
+            width: 70px;
+            height: 30px;
+            align-self: flex-end;
+            background-color: rgb(112, 133, 204);
+            color: aliceblue;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">   
+            Toán<br>
+            <input id="math" class="input" type="text">
+        </div>
+        <div class="grid-item">   
+            Lý<br>
+            <input id="physic" class="input" type="text">
+        </div>
+        <div class="grid-item">   
+            Hóa<br>
+            <input id="chemistry" class="input" type="text">
+        </div>
+        <button onclick="Average()">Average</button>
+        
+    </div>
+    
+    <label id="result">Điểm trung bình: </label>
+</body>
+<script>
+    function Average() {
+        var getMath = document.getElementById('math').value;
+        var getPhysic = document.getElementById('physic').value;
+        var getChemhistry = document.getElementById('chemistry').value;
+
+        calculator(getMath, getPhysic, getChemhistry);
+    }
+    function calculator(math, physic, chemistry){
+        var average = parseInt(math) + parseInt(physic) + parseInt(chemistry);
+
+        document.getElementById('result').innerHTML = 'Điểm trung bình: ' + average/3;
+    }
+</script>
+</html>

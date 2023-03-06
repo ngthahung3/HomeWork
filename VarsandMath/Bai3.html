@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            display: flex;
+            padding-bottom: 10px;
+        }
+        .grid-item{
+            position: relative;
+            text-align: center;
+        }
+        input{
+            width: 50%;
+            height: 50%;
+        }
+        button{
+            margin-top: 16px;
+            width: 70px;
+            height: 30px;
+            align-self: flex-end;
+            background-color: rgb(112, 133, 204);
+            color: aliceblue;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">   
+            Bán kính hình tròn<br>
+            <input id="radius" class="input" type="text">
+        </div>
+        <button onclick="Change()">Change</button>
+        
+        
+    </div>
+    <div>
+        <label id="acreage">Diện tích hình tròn: </label>
+    </div>
+    <div>
+        <label id="perimeter">Chu vi hình tròn: </label>
+    </div>
+    <script>
+        function Change(){
+            var inputRad = parseInt(document.getElementById('radius').value);
+            document.getElementById('acreage').innerHTML = "Diện tích hình tròn là: " + Math.pow(inputRad,2)*3.14;
+            document.getElementById('perimeter').innerHTML = "Chu vi hình tròn là: " + 2*inputRad*3.14;
+        }
+    </script>
+</body>

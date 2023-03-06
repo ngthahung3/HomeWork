@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- <link rel="text/javascript" href="/lesson_1/js/common.js"> -->
+    <title>Document</title>
+    
+</head>
+<body>
+    <form name="calculator" method="post" action="">
+        <table>
+            <tr>
+                <td>
+                    <input id="number1" class="input" type="text">
+                </td>
+                <td>
+                    <input id="number2" class="input" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="Addition()">Addition(+)</button>
+                    <button type="button" onclick="Subtraction()">Subtraction(-)</button>
+                </td>
+                <td>
+                    <button onclick="Multiplication()">Multiplication(x)</button>
+                    <button onclick="Division()">Division(/)</button>
+                </td> 
+            </tr>
+        </table>
+        
+        <label id="result">Result: </label>
+    </form>
+    <script type="text/javascript" src="/js/calculator.js" ></script>
+</body>
+</html>

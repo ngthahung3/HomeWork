@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            display: flex;
+            padding-bottom: 10px;
+        }
+        .grid-item{
+            position: relative;
+            text-align: center;
+        }
+        input{
+            width: 50%;
+            height: 50%;
+        }
+        button{
+            margin-top: 16px;
+            width: 70px;
+            height: 30px;
+            align-self: flex-end;
+            background-color: rgb(112, 133, 204);
+            color: aliceblue;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">   
+            Độ C<br>
+            <input id="celcius" class="input" type="text">
+        </div>
+        <button onclick="Change()">Change</button>
+        <div class="grid-item">   
+            Độ F<br>
+            <input id="fahren" class="input" type="text">
+        </div>
+        
+    </div>
+    <script>
+        function Change(){
+            var inputCel = document.getElementById('celcius').value;
+            document.getElementById('fahren').value = (parseInt(inputCel)*1.8)+32;
+        }
+    </script>
+</body>

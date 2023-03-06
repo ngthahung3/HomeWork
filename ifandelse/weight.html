@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">   
+            Nhập cân nặng<br>
+            <input id="weight" class="input" type="text">
+        </div>
+        <div class="grid-item">   
+            Nhập chiều cao<br>
+            <input id="height" class="input" type="text">
+        </div>
+        <button onclick="Change()">Change</button>
+        <div class="grid-item">   
+            <label id="bmi"></label>
+        </div>
+    </div>
+</body>
+<script>
+    function Change(){
+        let getWeight = document.getElementById('weight').value;
+        let getHeight = document.getElementById('height').value;
+        let weight = parseFloat(getWeight);
+        let height = parseFloat(getHeight);
+        let bmi = weight / (Math.pow(height,2))
+        
+        if (bmi < 18)
+            document.getElementById('bmi').innerHTML = "Underweight";
+        else if (bmi < 25.0)
+            document.getElementById('bmi').innerHTML = "Normal";
+        else if (bmi < 30.0)
+            document.getElementById('bmi').innerHTML = "Overweight";
+        else
+            document.getElementById('bmi').innerHTML = "Obese";
+        }    
+</script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- <link rel="text/javascript" href="/lesson_1/js/common.js"> -->
+    <title>Document</title>
+    <style>
+        .grid-container {
+            display: flex;
+            padding: 10px;
+        }
+        .grid-item{
+            position: relative;
+            text-align: center;
+        }
+        .grid-item__selectbox{
+            padding: 0 50px;
+        }
+        select{
+            width: 120%;
+        }
+        button{
+            width: 100px;
+            height: 25px;
+            align-self: flex-end;
+            background-color: rgb(112, 133, 204);
+            color: aliceblue;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">   
+            Amount<br>
+            <input id="amount" class="input" type="text">
+        </div>
+        <div class="grid-item grid-item__selectbox">
+            Form Current<br>
+            <select name="" id="form">
+                <option value="vnd">VND</option>
+                <option value="usd">USD</option>
+            </select>
+        </div>
+        <div class="grid-item grid-item__selectbox">
+            To Current<br>
+            <select name="" id="to">
+                <option value="vnd">USD</option>
+                <option value="usd">VND</option>
+            </select>
+            
+        </div>
+        <button onclick="Amount()">Convert</button>
+        
+    </div>
+    
+    <label id="result">Result: </label>
+</body>
+<script>
+    function Amount(){
+        var getInput = document.getElementById('amount').value;
+
+        var selectForm = document.getElementById('form').value;
+
+        var selectTo = document.getElementById('to').value;
+    
+        Change(getInput,selectForm,selectTo)
+    }
+
+    function Change(input, form, to){
+        if(form==1 && to==1){
+            document.getElementById('result').innerHTML = 'Result: ' + (input / 23000) + ' USD'
+        }else if(form==1 && to==2){
+            document.getElementById('result').innerHTML = 'Result: ' + (input) + ' VND'
+        }else if(form==2 && to==1){
+            document.getElementById('result').innerHTML = 'Result: ' + (input) + ' USD'
+        }else{
+            document.getElementById('result').innerHTML = 'Result: ' + (input *23000) + ' VND'
+        }
+    }
+
+
+
+</script>
+</html>
