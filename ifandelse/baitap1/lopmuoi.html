@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nhập tuổi học sinh xem đủ điều kiện học lớp 10 hay ko?</h1>
+    <input type="text" placeholder="Bao nhiêu tuổi" id="age"><br>
+    Bấm <button type="button" onclick="Check()">nút</button> để biết chi tiết
+</body>
+<script>
+    function Check() {
+        let tuoi = document.getElementById("age").value;
+        if(tuoi >= '16'){
+            alert("Bạn đủ tuổi học lớp 10");
+        }else{
+            alert("Bạn sắp đủ tuổi.");
+        }
+    }
+</script>
+</html>

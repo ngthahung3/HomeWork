@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nhập điểm kiểm tra, thi giữa kỳ, thi cuối kỳ</h1>
+    <input type="text" placeholder="Điểm kiểm tra" id="a"><br>
+    <input type="text" placeholder="Điểm thi giữa kỳ" id="b"><br>
+    <input type="text" placeholder="Điểm thi cuối kỳ" id="c"><br>
+    <button type="button" onclick="Check()">Kết quả xếp hạng</button>
+</body>
+<script>
+    function Check() {
+        let ktra = document.getElementById("a").value;
+        let giuaky = document.getElementById("b").value;
+        let cuoiky = document.getElementById("c").value;
+
+        let count = (parseFloat(ktra) + parseFloat(giuaky) + parseFloat(cuoiky))/3;
+
+        if(count < 4){
+            alert("Xếp hạng yếu");
+        }
+        else if(count < 6.5){
+            alert("Xếp hạng trung bình");
+        }
+        else if(count < 8.5){
+            alert("Xếp hạng khá");
+        }
+        else{
+            alert("Xếp hạng giỏi");
+        }
+    }
+</script>
+</html>

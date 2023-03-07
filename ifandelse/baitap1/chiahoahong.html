@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mức hoa hồng nhận được theo doanh số bán hàng</h1>
+    <input type="number" placeholder="Doanh số bán hàng" id="sales"><br>
+    <button type="button" onclick="Check()">Kiểm tra</button>
+</body>
+<script>
+    function Check() {
+        let sale= document.getElementById('sales').value;
+        let hoahong;
+        if(sale <= 500000){
+            hoahong = sale * 10 / 100;
+            alert("Hoa hồng nhận được là: " + hoahong + "VND");
+        }else if(sale <= 5000000){
+            hoahong = sale * 22 / 100;
+            alert("Hoa hồng nhận được là: " + hoahong + "VND");
+        }else{
+            hoahong = sale * 35 / 100;
+            alert("Hoa hồng nhận được là: " + hoahong + "VND");
+        }
+    }
+</script>
+</html>

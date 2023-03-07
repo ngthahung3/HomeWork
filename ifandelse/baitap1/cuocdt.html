@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính cước điện thoại hộ gia đình</h1>
+    <input type="number" placeholder="Số phút gọi" id="minute"><br>
+    
+    <button type="button" onclick="Check()">Tính cước</button>
+</body>
+<script>
+    function Check() {
+        let getMinute = document.getElementById("minute").value;
+        if(getMinute <= 50){
+            alert("Tổng cước là: " + getMinute*500)
+        }else if (getMinute <=100){
+            alert("Tổng cước là: " + getMinute*700);
+        }else{
+            alert("Tổng cước là: " + getMinute*1000);
+        }
+    }
+</script>
+</html>
