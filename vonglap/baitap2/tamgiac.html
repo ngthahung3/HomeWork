@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let input = 5;
+        let i,j,k;
+        let x = window.innerHeight;
+
+        for(i = 1; i <= input; i++){
+            for(j = 1; j<=i;j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        for(i = input; i >= 1; i--){
+            for(j = 1; j<=i;j++){
+                
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        for(i = 1; i <= input; i++){
+            for(j=1;j<=input;j++){
+                if(j<=input-i){
+                    document.write(" ");
+                }
+                else{
+                    document.write("*");
+                }
+            }
+            document.write("<br>");
+        }
+        
+    </script>
+</body>
+</html>

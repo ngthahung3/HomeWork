@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kiểm tra 3 số có phải 3 cạnh của tam giác hay ko?</h1>
+    <input type="number" placeholder="Nhập a" id="number1"><br>
+    <input type="number" placeholder="Nhập b" id="number2"><br>
+    <input type="number" placeholder="Nhập c" id="number3"><br>
+    <button type="button" onclick="Check()">Kiểm tra</button>
+</body>
+<script>
+    function Check() {
+        let a= document.getElementById('number1').value;
+        let b= document.getElementById('number2').value;
+        let c= document.getElementById('number3').value;
+
+        if(a,b,c > 0) {
+            if(a+b>c , a+c>b , b+c>a){
+                alert(a + ", " + b + ", " + c + " là 3 cạnh của tam giác");
+            }
+            else{
+                alert("Đây không phải 3 cạnh của tam giác");
+            }
+        }
+    }
+</script>
+</html>

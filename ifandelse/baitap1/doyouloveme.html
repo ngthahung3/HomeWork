@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Do you love me?</h1>
+    <button id="ys" onclick="Yes()" >Yes</button>
+    <button id="NO" style="position: absolute;" onmouseover="Onmouse()">No</button>
+</body>
+<script>
+    function Yes(){
+        alert("3>");
+    }
+    function Onmouse(){
+        let x = window.innerWidth;
+        let y = window.innerHeight;
+        let randX = Math.random()*x;
+        let randY = Math.random()*y;
+
+        let move = document.getElementById("NO");
+        move.style.left = randX + "px" ;
+        move.style.top = randY + "px" ;
+    }
+</script>
+</html>

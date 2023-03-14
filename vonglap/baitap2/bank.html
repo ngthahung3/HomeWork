@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let soTienGoc = prompt("Nhập số tiền vay");
+        let soThangVay = prompt("Nhập kỳ hạn vay(theo tháng)");
+        let laiSuat = prompt("Nhập lãi suất ngân hàng");
+
+        let laiSuatHangThang = laiSuat/12;
+        let payBank = soTienGoc * (Math.pow(1+laiSuatHangThang, soThangVay)- 1);
+        let total=0;
+        for(let i=1;i<=soThangVay;i++){
+            total += payBank;
+        }
+        alert("Tổng số lãi phải trả là: " + total);
+    </script>
+</body>
+</html>

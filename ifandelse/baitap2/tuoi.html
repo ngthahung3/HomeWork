@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kiểm tra một số có phải tuổi 1 người hay ko?</h1>
+    <input type="number" placeholder="Nhập số xem tuôi" id="age"><br>
+    <button type="button" onclick="Check()">Kiểm tra</button>
+</body>
+<script>
+    function Check() {
+        let tuoi= document.getElementById('age').value;
+        
+        if(tuoi < 120 && tuoi>0){
+            alert("Đây là tuổi của một người");
+        }else{
+            alert("Không phải là tuổi của một người");
+        }
+    }
+</script>
+</html>

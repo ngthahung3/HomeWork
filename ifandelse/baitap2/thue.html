@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính thuế thu nhập:</h1>
+    <input type="number" placeholder="Nhập lương" id="luong"><br>
+    
+    <button type="button" onclick="Check()">Kiểm tra</button>
+</body>
+<script>
+    function Check() {
+        let luong = document.getElementById('luong').value;
+        if(luong < 5000000) {
+            alert("Thuế thu nhập ban phải đóng là: " + luong * 0.05);
+        }else if(luong<10000000){
+            alert("Thuế thu nhập bạn phải đóng là: " + (luong * 0.1 - 250000));
+        }else if(luong < 18000000){
+            alert("Thuế thu nhập bạn phải đóng là: " + (luong * 0.15 - 750000));
+        }else if(luong <32000000){
+            alert("Thuế thu nhập bạn phải đóng là: " + (luong * 0.2 - 1650000));
+        }else if(luong <52000000){
+            alert("Thuế thu nhập bạn phải đóng là: " + (luong * 0.25 - 3250000));
+        }else if(luong < 80000000){
+            alert("Thuế thu nhập bạn phải đóng là: " + (luong * 0.3 - 5850000));
+        }else{
+            alert("Thuế thu nhập bạn phải đóng là: " + (luong * 0.35 - 9850000));
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button type="button" id="play" onclick="Play()">Chơi</button>
+    </div>
+    <script>
+        function Play(){
+            let limit = 3;
+            let min = prompt("Nhập số tối thiểu");
+            let max = prompt("Nhập số tối đa");
+            let random = Math.floor(Math.random() * (max - min)+ min) ;
+            let num = prompt("Nhập số bạn muốn đoán!!!");
+
+            if(num!= random){
+                for(let i = 1;i<limit;i++){
+                    num = prompt("Sai rồi! Nhập lại nào");
+                    if(num == random){
+                        alert("Chúc mừng bạn đã đoán trúng số cần đoán là" + random);
+                        return;
+                    }
+                    
+                }
+                alert("Rất tiếc bạn đã thua, số cần đoán là: " +random);
+                
+            }else{
+                alert("Chúc mừng bạn đã đoán trúng số cần đoán là " + random);
+            }
+        }
+    </script>
+</body>
+</html>
