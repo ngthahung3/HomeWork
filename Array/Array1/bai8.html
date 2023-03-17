@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array=[];
+        for(let i = 0; i<10;i++){
+            array.push(prompt("Nhập số nguyên của mảng: "));
+        }
+        document.write("Giá trị của mảng là: " + array + "<br>");
+        // let temp;
+        // for(let a = 0; a<array.length-1; a++){
+        //     for(let b=0; b<array.length-a-1; b++){
+        //         if(array[b]<array[b+1]){
+        //             temp = array[b];
+        //             array[b] = array[b+1];
+        //             array[b+1] = temp;
+        //         }
+        //     }
+        // }
+        document.write("Giá trị của mảng sau khi sắp xếp giảm dần là: "+ array.sort((a,b)=>a-b));
+    </script>
+</body>
+</html>
