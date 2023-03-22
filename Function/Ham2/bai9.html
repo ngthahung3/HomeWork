@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input"><br>
+    <button type="button" onclick="findWord()">Check</button>
+    <Script>
+        function findWord() {
+            let input = document.getElementById("input").value;
+            let array = input.split(" ");
+
+            let checkText = prompt("Nhập kí từ cần tìm");
+            let count = 0;
+            for(let i = 0; i<= array.length; i++) {
+                if(checkText == array[i]){
+                    count++;
+                }
+            }
+            alert("Ký tự " + checkText+ " có số lần xuất hiện là: " + count);
+        }
+    </Script>
+</body>
+</html>

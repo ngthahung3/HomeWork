@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkNumber(input){
+            if(typeof parseInt(input) == "number"){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        let nhap = prompt("Nhập ký tự bất kỳ kiểm tra xem phải là số hay không?");
+        alert(checkNumber(nhap));
+    </script>
+</body>
+</html>

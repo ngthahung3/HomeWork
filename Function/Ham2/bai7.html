@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hai số sau khi đổi chỗ</h1><br>
+    Số a: <label for="" id="a"></label><br>
+    Số b: <label for="" id="b"></label>
+    <script>
+        function doiChoHaiSo(a,b){
+            let temp;
+            temp = a;
+            a = b;
+            b = temp;
+            document.getElementById("a").innerHTML = a;
+            document.getElementById("b").innerHTML = b;
+        }
+        let inputA = prompt("Nhập vào số a");
+        let inputB = prompt("Nhập vào số b");
+
+        doiChoHaiSo(inputA, inputB);
+    </script>
+</body>
+</html>

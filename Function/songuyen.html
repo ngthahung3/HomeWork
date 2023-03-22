@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPrime(number){
+            let flag;
+            if(number < 2){
+                flag = 0;
+            }
+            else{
+                for(let i =2; i< number - 1; i++){
+                    if(number % i == 0){
+                        flag = 0;
+                        break;
+                    }
+                }
+            }
+            if(flag == 0){
+                console.log(number + " ko phải là số nguyên tố");
+            }
+            else{
+                console.log(number + " là số nguyên tố");
+            }
+           
+        }
+        let input = prompt("Nhap mot so bat ky");
+        console.log(isPrime(input));
+    </script>
+</body>
+</html>

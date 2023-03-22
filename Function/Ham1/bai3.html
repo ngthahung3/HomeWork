@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a"><br>
+    <input type="text" id="b"><br>
+    <button onclick="callHam()">Kq</button><br>
+    <label id="result"></label>
+    <script>
+        function callHam(){
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            if(a<=b){
+                document.getElementById("result").innerHTML = "Result: " +(parseInt(a)+parseInt(b));
+            }
+            else{
+                alert("Số a lớn hơn số b");
+            }
+        }
+    </script>
+</body>
+</html>
